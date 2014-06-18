@@ -7,11 +7,11 @@ nav.navbar.navbar-static-top.navbar-default.carrot role="navigation"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="#"  Pinteresting
+      =link_to "Pinteresting", root_path, class: "navbar-brand"
     /! Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         li= link_to "Home", root_path
-        li= link_to "About Us", about_path
-        li= link_to "Contact Us", contact_us_path
+        li= link_to "About", about_path
+        li= link_to "Contact", contact_us_path
    
