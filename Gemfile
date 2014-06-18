@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 #Bootsrap
 gem 'bootstrap-sass'
 
+#Slim templates
+gem 'slim-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
