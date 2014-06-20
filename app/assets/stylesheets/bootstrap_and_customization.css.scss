@@ -6,7 +6,27 @@ $headings-color: #ecf0f1;
 
 @import 'bootstrap';
 
+h1,h2,h3,h4,h5,h6{
+	color: #000;
+}
+
 .center{
 	text-align: center;
 }
+.white{
+	color: #FFF;
+}
+.jumbotron.home{
+	box-shadow: 6px 11px 17px -1px rgba(0,0,0,0.5);
+}
+.jumbotron.about{
+	box-shadow: 6px 11px 17px -1px rgba(0,0,0,0.5);
+	p{
+		font-size: 18px;
+	}
+}
+.jumbotron.contact{
+	box-shadow: 6px 11px 17px -1px rgba(0,0,0,0.5);
+}
+
 
