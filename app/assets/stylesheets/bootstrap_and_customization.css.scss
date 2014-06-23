@@ -3,6 +3,7 @@ $navbar-default-bg: #e67e22;
 $navbar-default-link-color: #FFF;
 $navbar-default-link-hover-color: #7f8c8d;
 $headings-color: #ecf0f1;
+$emphasis-color: #d9534f;
 
 @import 'bootstrap';
 
@@ -28,5 +29,9 @@ h1,h2,h3,h4,h5,h6{
 .jumbotron.contact{
 	box-shadow: 6px 11px 17px -1px rgba(0,0,0,0.5);
 }
+.call-to-action{
+	color: $emphasis-color;
+}
+
 
 
