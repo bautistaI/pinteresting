@@ -1,9 +1,10 @@
 .jumbotron.home.center
-  h1 Welcome to Pinteresting
-  /! <small>Find me in app/views/pages/home.html.erb, I'm set now as a new root on routes.rb</small
-  /! embedded ruby (link)
-  p
-  	=link_to "Login", "#", class:"btn btn-primary btn-lg" 
-	p
-		=link_to "Sign Up", "#", class:"btn btn-danger btn-lg"
-  
+  h1 Welcome to Pinteresting  
+  - if user_signed_in? 
+  	p Hello there!
+  - else
+		/ p
+		/ 	=link_to "Login", new_user_session_path, class:"btn btn-primary btn-lg" 
+		p
+			=link_to "Sign Up", new_user_registration_path, class:"btn btn-danger btn-lg"
+ 
