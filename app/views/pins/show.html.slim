@@ -1,0 +1,12 @@
+.panel.panel-default
+	.panel-heading
+		/ p#notice = notice
+		h1 Pin Description
+	.panel-body
+		p
+		  strong Description:
+		  = @pin.description
+	.panel-footer
+		= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary"
+		'
+		= link_to 'Back', pins_path, class: "btn btn-default"

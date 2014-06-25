@@ -1,0 +1,24 @@
+.panel.panel-default
+  .panel-heading
+    h1 Listing pins
+  
+  .panel-body
+    table
+      thead
+        tr
+          th Description
+          th
+          th
+          th
+
+      tbody
+        - @pins.each do |pin|
+          tr
+            td = pin.description
+            td = link_to 'Show', pin
+            td = link_to 'Edit', edit_pin_path(pin)
+            td = link_to 'Destroy', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Pin', new_pin_path, class: "btn btn-primary"
