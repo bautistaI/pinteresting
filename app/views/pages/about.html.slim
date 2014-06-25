@@ -2,12 +2,15 @@
 	h1 Hi! nice to meet you.
 	p 
 		|Hi there, my name is Israel, I am a front-end developer.
-		br I'm currently working for a startup company called 
+		br I'm currently working at a startup company called: 
 		=link_to "Hiplogiq", "http://www.hiplogiq.com" 
 	p 
 		|I am passionate about web technology and I'm always trying to learn new things.
 		br 
-		|Did I mentioned I used to be an Optometrist? yeah crazy right?
+		|Pinteresting is a project meant to help me learn Ruby and Rails.
+		br
+		|It is a clone of Pinterest made with the help and guidance from the guys at: 
+		=link_to "One Month Rails", "http://www.onemonth.com"
 		
 	p 
-		=image_tag('profile.png', :alt=> 'image', :width => 200, :height => 200)
+		= link_to image_tag('profile.png', :alt=> 'image', :width => 200, :height => 200), 'http://www.israelbautista.com'
