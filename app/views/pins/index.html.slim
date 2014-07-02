@@ -1,4 +1,4 @@
-.panel.panel-default
+.panel.panel-default.listing-pins
   .panel-heading
     h1 Listing pins
   
@@ -6,7 +6,8 @@
     table
       thead
         tr
-          th Description
+          th.pin-label Description
+          th.pin-label User
           th
           th
           th
@@ -14,11 +15,13 @@
       tbody
         - @pins.each do |pin|
           tr
-            td = pin.description
-            td = link_to 'Show', pin
-            td = link_to 'Edit', edit_pin_path(pin)
-            td = link_to 'Destroy', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
+            td.pin-show = pin.description
+            td.pin-show = pin.user.email if pin.user
+            td.pin-show = link_to 'Show', pin_path(pin)
+            - if pin.user == current_user
+              td.pin-show = link_to 'Edit', edit_pin_path(pin)
+              td.pin-show = link_to 'Destroy', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
 
     br
-
-    = link_to 'New Pin', new_pin_path, class: "btn btn-primary"
+    - if user_signed_in?
+      = link_to 'New Pin', new_pin_path, class: "btn btn-primary"
