@@ -22,7 +22,7 @@
             td.pin-show = link_to 'Show', pin_path(pin)
             - if pin.user == current_user
               td.pin-show = link_to 'Edit', edit_pin_path(pin)
-              td.pin-show = link_to 'Destroy', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
+              td.pin-show = link_to 'Delete', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
 
     br
     - if user_signed_in?
