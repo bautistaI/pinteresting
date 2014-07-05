@@ -4,6 +4,8 @@
 		h1 Pin Description
 	.panel-body
 		p
+			= image_tag @pin.image.url(:medium)
+		p
 		  strong Description:
 		  = @pin.description
 	.panel-footer
