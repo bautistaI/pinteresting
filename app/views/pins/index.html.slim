@@ -30,9 +30,9 @@ div#pins.transitions-enabled
       .panel-body
         p.pin-show = pin.description
         p.pin-show = pin.user.email if pin.user
-        = link_to 'Show', pin_path(pin), class: "btn btn-default"
+        = link_to 'Show', pin_path(pin), class: "btn btn-primary"
         - if pin.user == current_user
-          = link_to 'Edit', edit_pin_path(pin), class: "btn btn-warning"
+          = link_to 'Edit', edit_pin_path(pin), class: "btn btn-default"
           = link_to 'Delete', pin, data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-danger"
 
 

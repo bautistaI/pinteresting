@@ -3,10 +3,11 @@
 		/ p#notice = notice
 		h1 Pin Description
 	.panel-body
-		p
+		p.main-pin
 			= image_tag @pin.image.url(:medium)
 		p
 		  strong Description:
+		  br
 		  = @pin.description
 	.panel-footer
 		- if @pin.user == current_user
