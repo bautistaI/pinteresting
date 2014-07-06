@@ -1,29 +1,43 @@
-.panel.panel-default.listing-pins
-  .panel-heading
-    h1 Listing pins
+/ .panel.panel-default.listing-pins
+/   .panel-heading
+/     h1 Listing pins
   
-  .panel-body
-    table
-      thead
-        tr
-          th.pin-label Image
-          th.pin-label Description
-          th.pin-label User
-          th
-          th
-          th
+/   .panel-body
+/     table
+/       thead
+/         tr
+/           th.pin-label Image
+/           th.pin-label Description
+/           th.pin-label User
+/           th
+/           th
+/           th
 
-      tbody
-        - @pins.each do |pin|
-          tr
-            td.pin-show = image_tag pin.image.url(:thumb)
-            td.pin-show = pin.description
-            td.pin-show = pin.user.email if pin.user
-            td.pin-show = link_to 'Show', pin_path(pin)
-            - if pin.user == current_user
-              td.pin-show = link_to 'Edit', edit_pin_path(pin)
-              td.pin-show = link_to 'Delete', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
+/       tbody
+/         - @pins.each do |pin|
+/           tr
+/             td.pin-show = image_tag pin.image.url(:thumb)
+/             td.pin-show = pin.description
+/             td.pin-show = pin.user.email if pin.user
+/             td.pin-show = link_to 'Show', pin_path(pin)
+/             - if pin.user == current_user
+/               td.pin-show = link_to 'Edit', edit_pin_path(pin)
+/               td.pin-show = link_to 'Delete', pin, data: {:confirm => 'Are you sure?'}, :method => :delete
+div#pins.transitions-enabled
+  - @pins.each do |pin|
+    div.box.panel.panel-default
+      p.pin-show = image_tag pin.image.url(:thumb)
+      .panel-body
+        p.pin-show = pin.description
+        p.pin-show = pin.user.email if pin.user
+        = link_to 'Show', pin_path(pin), class: "btn btn-default"
+        - if pin.user == current_user
+          = link_to 'Edit', edit_pin_path(pin), class: "btn btn-warning"
+          = link_to 'Delete', pin, data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-danger"
 
-    br
-    - if user_signed_in?
-      = link_to 'New Pin', new_pin_path, class: "btn btn-primary"
+
+
+
+
+
+

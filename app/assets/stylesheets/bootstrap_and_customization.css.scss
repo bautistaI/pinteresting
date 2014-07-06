@@ -34,13 +34,28 @@ h1,h2,h3,h4,h5,h6{
 .call-to-action{
 	color: $emphasis-color;
 }
-td.pin-show{
-	padding-right: 5px;
+p.pin-show{
+	color: #000;
 }
-th.pin-label{
+p.pin-label{
 	text-align: center;
 	padding-right: 20px;
 }
+
+#pins{
+	margin: 0 auto;
+	a{
+		margin-right: 5px;
+	}
+}
+.box{
+	margin: 5px;
+	width: 230px;
+	img{
+		width: 100%;
+	}
+}
+
 
 
 

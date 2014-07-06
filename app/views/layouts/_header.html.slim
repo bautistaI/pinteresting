@@ -15,6 +15,7 @@ nav.navbar.navbar-static-top.navbar-default.carrot role="navigation"
         li= link_to "About", about_path
         li= link_to "Contact", contact_us_path
         - if user_signed_in? 
+          li= link_to 'New Pin', new_pin_path
           /! important to notice the method: :delete needs to be added
           li= link_to "Log Out", destroy_user_session_path, method: :delete
         - else 
