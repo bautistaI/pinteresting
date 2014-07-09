@@ -45,21 +45,38 @@ p.pin-label{
 #pins{
 	margin: 0 auto;
 	a{
-		margin-right: 5px;
+		margin-right: 10px;
 	}
 }
 .box{
 	margin: 5px;
 	width: 230px;
+	box-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+	border: none;
+	border-radius: 0;
 	img{
 		width: 100%;
 	}
 }
 .main-pin{
 	img{
-		border-radius: 10px;
-		box-shadow: 0 0 15px 5px rgba(0,0,0,0.7);
+		box-shadow: 3px 3px 4px rgba(0,0,0,0.5);
 	}
+}
+
+.btn{
+	margin-right: 10px;
+}
+.btn.new-pin{
+	padding: 5px;
+	margin-top: 10px;
+}
+a:hover.btn.btn-primary.new-pin{
+	background: #50AAF8;
+	color: #FFF;
+}
+.glyphicon:before{
+	margin-right: 3px;
 }
 
 

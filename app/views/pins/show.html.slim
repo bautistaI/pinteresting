@@ -1,14 +1,10 @@
 .panel.panel-default
-	.panel-heading
-		/ p#notice = notice
-		h1 Pin Description
-	.panel-body
+	.panel-heading.center
+		p
+		  = @pin.description
+	.panel-body.center
 		p.main-pin
 			= image_tag @pin.image.url(:medium)
-		p
-		  strong Description:
-		  br
-		  = @pin.description
 	.panel-footer
 		- if @pin.user == current_user
 			= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary"
