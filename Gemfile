@@ -26,6 +26,12 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 # Masonry jQuery
 gem 'masonry-rails', '~> 0.2.1'
 
+# Paginate
+gem 'will_paginate', '~> 3.0'
+
+# bootstrap paginator
+gem 'will_paginate-bootstrap'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
